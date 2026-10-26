@@ -1,0 +1,246 @@
+const solutionSeed = {
+  "id": 337884,
+  "title": "СОУЭ-017",
+  "description": "Цифровая система оповещения и управления эвакуацией “Тромбон IP” для небольших объектов",
+  "groups": [
+    {
+      "id": "group-0",
+      "name": "Основной состав",
+      "products": [
+        {
+          "id": "304283",
+          "title": "Тромбон IP-МО8",
+          "description": "Модуль оповещения",
+          "manufacturer": "ТРОМБОН",
+          "quantity": 1,
+          "initialQuantity": 1,
+          "minQuantity": 1,
+          "step": 1,
+          "unit": "шт",
+          "yourPrice": 150080,
+          "retailPrice": 187600,
+          "sale": false,
+          "honestSign": false,
+          "image": "assets/solution-304283.jpg"
+        },
+        {
+          "id": "304298",
+          "title": "Тромбон IP-K8-АКБ",
+          "description": "Коммутатор с PoE",
+          "manufacturer": "ТРОМБОН",
+          "quantity": 1,
+          "initialQuantity": 1,
+          "minQuantity": 0,
+          "step": 1,
+          "unit": "шт",
+          "yourPrice": 144436,
+          "retailPrice": 180545,
+          "sale": false,
+          "honestSign": false,
+          "image": "assets/solution-304298.jpeg"
+        },
+        {
+          "id": "277597",
+          "title": "ТРОМБОН IP-ПЗВ",
+          "description": "Пульт звукового вещания",
+          "manufacturer": "ТРОМБОН",
+          "quantity": 1,
+          "initialQuantity": 1,
+          "minQuantity": 0,
+          "step": 1,
+          "unit": "шт",
+          "yourPrice": 70362,
+          "retailPrice": 87953,
+          "sale": false,
+          "honestSign": false,
+          "image": "assets/solution-277597.jpg"
+        },
+        {
+          "id": "303846",
+          "title": "Тромбон IP-ВП исп. Н",
+          "description": "IP вызывная панель",
+          "manufacturer": "ТРОМБОН",
+          "quantity": 1,
+          "initialQuantity": 1,
+          "minQuantity": 0,
+          "step": 1,
+          "unit": "шт",
+          "yourPrice": 45838,
+          "retailPrice": 57297,
+          "sale": false,
+          "honestSign": false,
+          "image": "assets/solution-303846.jpg"
+        },
+        {
+          "id": "304276",
+          "title": "Глагол Н3-10IP (белый)",
+          "description": "IP оповещатель",
+          "manufacturer": "ТРОМБОН",
+          "quantity": 1,
+          "initialQuantity": 1,
+          "minQuantity": 0,
+          "step": 1,
+          "unit": "шт",
+          "yourPrice": 43598,
+          "retailPrice": 54497,
+          "sale": false,
+          "honestSign": false,
+          "image": "assets/solution-304276.jpg"
+        },
+        {
+          "id": "348080",
+          "title": "Глагол ТН-10IP",
+          "description": "IP оповещатель",
+          "manufacturer": "ТРОМБОН",
+          "quantity": 1,
+          "initialQuantity": 1,
+          "minQuantity": 0,
+          "step": 1,
+          "unit": "шт",
+          "yourPrice": 61004,
+          "retailPrice": 76255,
+          "sale": false,
+          "honestSign": false,
+          "image": "assets/solution-348080.jpg"
+        },
+        {
+          "id": "008064",
+          "title": "Delta DT 1207",
+          "description": "Аккумулятор герметичный свинцово-кислотный",
+          "manufacturer": "Delta",
+          "quantity": 4,
+          "initialQuantity": 4,
+          "minQuantity": 0,
+          "step": 1,
+          "unit": "шт",
+          "yourPrice": 1418.4,
+          "retailPrice": 1576,
+          "sale": false,
+          "honestSign": false,
+          "image": "assets/solution-008064.jpeg"
+        },
+        {
+          "id": "304293",
+          "title": "Тромбон IP-ПО",
+          "description": "Программа",
+          "manufacturer": "ТРОМБОН",
+          "quantity": 1,
+          "initialQuantity": 1,
+          "minQuantity": 0,
+          "step": 1,
+          "unit": "шт",
+          "yourPrice": 20504,
+          "retailPrice": 25630,
+          "sale": false,
+          "honestSign": false,
+          "image": "assets/solution-304293.jpg"
+        }
+      ]
+    },
+    {
+      "id": "group-1",
+      "name": "Кабельная продукция",
+      "products": [
+        {
+          "id": "007209",
+          "title": "ParLan U/UTP Cat5e PVC 4х2х0,52 (100005)",
+          "description": "Кабель «витая пара» (LAN) для структурированных систем связи",
+          "manufacturer": "Паритет",
+          "quantity": 0,
+          "initialQuantity": 0,
+          "minQuantity": 0,
+          "step": 0.305,
+          "unit": "км",
+          "yourPrice": 43881.48,
+          "retailPrice": 49550,
+          "sale": false,
+          "honestSign": false,
+          "image": "assets/solution-007209.jpeg"
+        },
+        {
+          "id": "216772",
+          "title": "КПСЭнг(А)-FRLS 1х2х1,5 (Технокабель-НН)",
+          "description": "Кабель для систем ОПС и СОУЭ огнестойкий, не поддерживающий горения, экранированный",
+          "manufacturer": "Технокабель-НН",
+          "quantity": 0,
+          "initialQuantity": 0,
+          "minQuantity": 0,
+          "step": 0.2,
+          "unit": "км",
+          "yourPrice": 62354.51,
+          "retailPrice": 66889.38,
+          "sale": false,
+          "honestSign": false,
+          "image": "assets/solution-216772.jpeg"
+        }
+      ]
+    },
+    {
+      "id": "group-2",
+      "name": "Доп. оборудование для создания СОУЭ 4 типа",
+      "products": [
+        {
+          "id": "268223",
+          "title": "ТРОМБОН-БСО",
+          "description": "Блок светового оповещения",
+          "manufacturer": "ТРОМБОН",
+          "quantity": 0,
+          "initialQuantity": 0,
+          "minQuantity": 0,
+          "step": 1,
+          "unit": "шт",
+          "yourPrice": 32328,
+          "retailPrice": 40410,
+          "sale": false,
+          "honestSign": false,
+          "image": "assets/solution-268223.jpeg"
+        }
+      ]
+    },
+    {
+      "id": "group-3",
+      "name": "Дополнительное оборудование",
+      "products": [
+        {
+          "id": "304282",
+          "title": "Тромбон IP-ВП исп. У",
+          "description": "IP вызывная панель",
+          "manufacturer": "ТРОМБОН",
+          "quantity": 0,
+          "initialQuantity": 0,
+          "minQuantity": 0,
+          "step": 1,
+          "unit": "шт",
+          "yourPrice": 115058,
+          "retailPrice": 143823,
+          "sale": false,
+          "honestSign": false,
+          "image": "assets/solution-304282.jpg"
+        },
+        {
+          "id": "075018",
+          "title": "Тромбон-БП-7",
+          "description": "Блок резервного питания",
+          "manufacturer": "ТРОМБОН",
+          "quantity": 0,
+          "initialQuantity": 0,
+          "minQuantity": 0,
+          "step": 1,
+          "unit": "шт",
+          "yourPrice": 54224,
+          "retailPrice": 67780,
+          "sale": false,
+          "honestSign": false,
+          "image": "assets/solution-075018.jpeg"
+        }
+      ]
+    }
+  ],
+  "quantity": 1,
+  "step": 1,
+  "unit": "компл",
+  "manufacturer": "ТРОМБОН",
+  "image": "assets/solution-337884.jpeg",
+  "favorite": false
+};
+

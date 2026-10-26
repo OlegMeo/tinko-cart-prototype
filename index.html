@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Прототип корзины ТД ТИНКО">
+  <title>Корзина — ТД ТИНКО</title>
+  <link rel="stylesheet" href="styles.css?v=17">
+</head>
+<body class="is-mode-selection">
+  <main id="mode-selection" class="mode-selection" aria-label="Выбор пользователя">
+    <a href="?mode=registered">Зарегистрированный пользователь</a>
+    <a href="?mode=guest">Не зарегистрированный пользователь</a>
+    <a href="?mode=add">Добавление в корзину</a>
+  </main>
+  <header class="site-header">
+    <div class="header-primary">
+      <a class="brand" href="#" aria-label="Торговый Дом ТИНКО"><img src="assets/logo.svg" alt="Торговый Дом ТИНКО"></a>
+      <nav class="top-nav" aria-label="Основная навигация">
+        <a href="#">Компания</a><a href="#">Новости</a><a href="#">Как купить</a><a href="#">Прайс-лист</a>
+        <a href="#">Доставка</a><a href="#">Тех. поддержка</a><a href="#">Форум</a><a href="#">Контакты</a>
+      </nav>
+      <div class="phones"><a href="tel:+74957084213">8 (495) 708-42-13</a><a href="tel:+78002008465">8 (800) 200-84-65</a></div>
+    </div>
+    <div class="header-secondary">
+      <div class="header-secondary-inner">
+        <button class="catalog-button" type="button"><img src="assets/menu.svg" alt=""><span>Каталог товаров</span></button>
+        <label class="search-field"><span class="sr-only">Поиск</span><input type="search" placeholder="Введите артикул, слово или фразу"><img src="assets/search.svg" alt=""></label>
+        <div class="header-actions">
+          <button type="button" aria-label="Сравнение"><img src="assets/compare.svg" alt=""></button>
+          <button type="button" aria-label="Избранное"><img src="assets/favorite.svg" alt=""></button>
+          <div class="cart-preview-control">
+            <button id="cart-preview-trigger" class="cart-preview-trigger" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="cart-preview">
+              <img src="assets/basket.svg" alt=""><span class="sr-only">Открыть корзину</span><span id="cart-preview-trigger-total" class="cart-preview-trigger-total" hidden></span><span id="cart-preview-trigger-badge" class="cart-count-badge" hidden></span>
+            </button>
+          </div>
+          <button id="account-button" class="login-button" type="button"><img src="assets/user.svg" alt=""><span>Войти</span></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div id="cart-preview-overlay" class="cart-preview-overlay" hidden>
+    <section id="cart-preview" class="cart-preview" role="dialog" aria-label="Превью корзины" hidden>
+      <header class="cart-preview-header">
+        <div class="cart-preview-heading-row">
+          <h2>Корзина</h2>
+          <button id="cart-preview-close" class="cart-preview-close" type="button" aria-label="Закрыть"><img src="assets/close.svg" alt=""></button>
+        </div>
+        <div id="cart-preview-list" class="cart-preview-list"></div>
+      </header>
+      <div id="cart-preview-detail" class="cart-preview-detail"></div>
+    </section>
+  </div>
+
+  <main id="catalog-flow" class="catalog-flow" aria-label="Добавление в корзину" hidden></main>
+  <main class="page-shell">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="#">Главная</a><span>/</span><a href="#">Личный кабинет</a></nav>
+    <div id="cart-tabs" class="cart-tabs" role="tablist" aria-label="Корзины"></div>
+    <section id="additional-cart-info" class="additional-cart-info" hidden>
+      <p>Это дополнительная корзина. Она работает так же, как основная: добавляйте в неё оборудование<br>и оформляйте заявки. Если корзина больше не нужна, её можно удалить.</p>
+      <div class="additional-cart-actions">
+        <button id="additional-help" type="button"><img src="assets/help.svg" alt=""><span>Как использовать</span></button>
+        <button id="delete-additional-cart" type="button"><img src="assets/additional-trash.svg" alt=""><span>Удалить корзину</span></button>
+      </div>
+    </section>
+
+    <div id="content-grid" class="content-grid">
+      <section class="cart-panel" aria-label="Товары в корзине">
+        <div class="cart-toolbar">
+          <label class="select-all-label">
+            <input id="select-all" type="checkbox"><span class="custom-check"><img src="assets/check-new.svg" alt=""></span><span>Выбрать все</span>
+          </label>
+          <div class="bulk-actions">
+            <button id="print-button" type="button"><img src="assets/printer.svg" alt=""><span>Печать</span></button>
+            <button id="delete-selected" type="button"><img src="assets/trash.svg" alt=""><span>Удалить выбранные</span></button>
+          </div>
+        </div>
+        <div class="panel-divider"></div>
+        <div id="cart-items" class="cart-items"></div>
+      </section>
+      <aside id="summary-card" class="summary-card" aria-label="Итого по корзине"></aside>
+    </div>
+
+    <section id="solutions-panel" class="solutions-panel" aria-label="Типовые решения" hidden></section>
+
+    <section id="empty-state" class="empty-state" hidden>
+      <div class="empty-illustration" aria-hidden="true"><img src="assets/empty-basket-new.svg" alt=""><span>0</span></div>
+      <div><h1>В корзине пусто</h1><p>Выбирайте товары в каталоге или через поиск<br>и добавляйте их в корзину</p></div>
+      <button type="button">Перейти в каталог</button>
+    </section>
+  </main>
+
+  <div id="modal-layer" class="modal-layer" hidden></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="solution-data.js?v=9"></script>
+  <script src="app.js?v=17"></script>
+</body>
+</html>
